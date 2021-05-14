@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour {
 
     private void TryJump()
     {
-        if(Input.GetKeyDown(KeyCode.Space)) && isGround
+        if(Input.GetKeyDown(KeyCode.Space) && isGround)
         {
             Jump();
         }
