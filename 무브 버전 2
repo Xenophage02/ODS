@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour
+{
+
+    float hAxis;
+    float vAxis;
+
+    Vector3 moveVec;
+
+    void Start()
+    {
+        
+    }
+
+    
+    void Update()
+    {
+        hAxis = Input.GetAxisRaw("horizontal");
+        vAxis = Input.GetAxisRaw("vertical");
+
+        moveVec = nwe Vector3(hAxis, 0, vAxis).nomalized;
+
+        transform.position += moves * speed * Time.detaTime;
+
+        transform.LookAt(transform.position + moveVec);
+
+    }
