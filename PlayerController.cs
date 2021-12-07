@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
     // Start is called before the first frame update
     // 속도 조정 변수
     
-     [SerializeField]
+    [SerializeField]
     private float walkSpeed;
 
     [SerializeField]
@@ -42,12 +42,12 @@ public class PlayerController : MonoBehaviour {
     //필요한 컴포넌트
     [SerializeField]
     private Rigidbody myRigid;
+    
     [SerializeField]
     private Camera theCamera;
 
 
     
-
     //카메라 한계
 
     [SerializeField]
@@ -55,7 +55,8 @@ public class PlayerController : MonoBehaviour {
     private float currentCameraRotationX = 0;
     
     
-    void Start() {
+    void Start() 
+    {
         capsuleCollider = GetComponent<CapsuleCollider>();
         myRigid = GetComponent<Rigidbody>();
         applySpeed = walkSpeed;
@@ -64,10 +65,11 @@ public class PlayerController : MonoBehaviour {
         originPosY = theCamera.transform.localPosition.y;
         applyCrouchPosY = orginPosY;
 
-        }
+    }
 
     // Update is called once per frame
-    void Update(){
+    void Update()
+    {
 
         IsGround();
         TryJump();
